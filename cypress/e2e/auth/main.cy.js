@@ -2,6 +2,9 @@ import loginPage from '../../pageObjectModel/pages/LoginPage'
 import invalidLogin from '../../pageObjectModel/pages/invalidLogin'
 import addToCart from '../../pageObjectModel/pages/addToCart'
 import urlCheck from '../../pageObjectModel/pages/urlCheck';
+import useFilter from '../../pageObjectModel/pages/useFilter';
+import checkout from '../../pageObjectModel/pages/checkout';
+import fillForm from '../../pageObjectModel/pages/fillForm';
 
 describe('Login Tests',() => {
     before(() => {
@@ -15,6 +18,10 @@ describe('Login Tests',() => {
         const UrlCheck = new urlCheck();
         const PageLogin = new loginPage();
         const InvalidLogin = new invalidLogin();
+        const UseFilter = new useFilter();
+        const Checkout = new checkout();
+        const FillForm = new fillForm();
+        
         // First test invalid login
         InvalidLogin.invalidLogin();
         cy.reload();
@@ -22,6 +29,11 @@ describe('Login Tests',() => {
 
         UrlCheck.urlCheck();
         AddToCart.addToCart();
+
+        UseFilter.useFilter();  
+
+        Checkout.checkout();
+        FillForm.fillForm();
 
     })
 });
