@@ -12,7 +12,7 @@ describe('Login Tests',() => {
     })
     
     it('should handle invalid login and then valid login',() => {
-        cy.visit('https://saucedemo.com')
+        cy.visit('/')
 
         const AddToCart = new addToCart();
         const UrlCheck = new urlCheck();
