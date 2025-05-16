@@ -1,4 +1,6 @@
 class Login{    
+
+
     loginPage(){
         cy.fixture('credentials').then((creds) => {
 
